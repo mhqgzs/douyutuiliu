@@ -33,6 +33,14 @@ public class StreamCode extends HttpServlet {
 			fw.write(addr+"/"+code );
 			//System.out.println(code);
 			fw.close();
+			
+			Process pro = Runtime.getRuntime().exec("/root/douyu----------------------video3/killShowAndFfmpeg.sh");
+			try {
+				pro.waitFor();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
 			response.getWriter().write("fw is write over");;
 		}
 		
@@ -55,6 +63,14 @@ public class StreamCode extends HttpServlet {
 			fw.write(addr+"/"+code );
 			//System.out.println(code);
 			fw.close();
+			
+			Process pro = Runtime.getRuntime().exec("/root/douyu----------------------video3/killShowAndFfmpeg.sh");
+			try {
+				pro.waitFor();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
 			response.getWriter().write("fw is write over");;
 		}
 	}

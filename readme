@@ -1,5 +1,7 @@
-使用油猴，拦截开播界面。 油猴脚本放一以了googleDriver里。
+使用油猴，拦截开播界面。 油猴脚本备份在googleDriver里。
 
-本java代码。负责写文件。
+本java代码。打成war包，部署在vps里的tomcat里（tomcat开通https），主要功能是将传过来的推流URL写到本地文件。
 
-vps上一个脚本。负责读出文件里的url，然后使用ffmpeg推流
+ killShowAndFfmpeg.sh脚本。负责清理用来推流的ffmpeg进程 。。之后调用show.sh进行推流
+ 
+ show.sh，读出rtmp，调用ffmpeg推流。
